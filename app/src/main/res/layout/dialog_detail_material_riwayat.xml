@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Header Title with Icon -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="16dp">
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/ic_history"
+                app:tint="@color/primary_blue"
+                android:layout_marginEnd="12dp"
+                android:contentDescription="Detail Icon"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rincian Material"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/primary_blue"/>
+        </LinearLayout>
+
+        <!-- Card Nama Material -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="0dp"
+            app:cardBackgroundColor="#F3F4F6"
+            app:strokeColor="#E5E7EB"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="12dp">
+
+                <TextView
+                    android:id="@+id/tvNamaMaterialDetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Nama Barang"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="#1F2937"/>
+
+                <TextView
+                    android:id="@+id/tvBadgeDraft"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="📄 BELUM JADI SLIP RESMI"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:textColor="#DC2626"
+                    android:visibility="gone"
+                    android:layout_marginTop="4dp"
+                    android:paddingHorizontal="6dp"
+                    android:paddingVertical="2dp"
+                    android:background="#FFEBEE"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Card Total QTY Naik Truk -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="0dp"
+            app:cardBackgroundColor="#EFF6FF"
+            app:strokeColor="#BFDBFE"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="12dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Total Naik Truk Hari Ini"
+                    android:textSize="13sp"
+                    android:textColor="#1E40AF"/>
+
+                <TextView
+                    android:id="@+id/tvTotalQtyDetail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0 SET"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="#1E3A8A"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Section Rincian Pekerjaan -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="RINCIAN PEKERJAAN"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:textColor="#6B7280"
+            android:letterSpacing="0.05"
+            android:layout_marginBottom="6dp"/>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="0dp"
+            app:cardBackgroundColor="#FFFFFF"
+            app:strokeColor="#E5E7EB"
+            app:strokeWidth="1dp">
+
+            <TextView
+                android:id="@+id/tvRincianPekerjaanDetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="- Pekerjaan: QTY"
+                android:textSize="13sp"
+                android:textColor="#374151"
+                android:padding="12dp"
+                android:lineSpacingExtra="4dp"/>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Status Delivery Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardStatusDelivery"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="0dp"
+            app:cardBackgroundColor="#ECFDF5"
+            app:strokeColor="#A7F3D0"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="12dp">
+
+                <TextView
+                    android:id="@+id/tvStatusIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="✅"
+                    android:textSize="18sp"
+                    android:layout_marginEnd="10dp"/>
+
+                <TextView
+                    android:id="@+id/tvStatusText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Status: Semua barang dari Surat Jalan sudah terkirim."
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:textColor="#065F46"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Button Pelunasan Administrasi (Slip Diterima) -->
+        <Button
+            android:id="@+id/btnPelunasanDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="📄 KONFIRMASI SLIP RESMI DITERIMA"
+            android:layout_marginTop="12dp"
+            style="?attr/materialButtonOutlinedStyle"
+            app:strokeColor="#2563EB"
+            android:textColor="#2563EB"
+            app:cornerRadius="10dp"
+            android:visibility="gone"/>
+
+        <!-- Button Retur ke Gudang Sisa -->
+        <Button
+            android:id="@+id/btnReturGudangDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="📦 RETUR SEBAGIAN KE GUDANG SISA"
+            android:layout_marginTop="12dp"
+            style="?attr/materialButtonOutlinedStyle"
+            app:strokeColor="#D32F2F"
+            android:textColor="#D32F2F"
+            app:cornerRadius="10dp"/>
+
+    </LinearLayout>
+</ScrollView>

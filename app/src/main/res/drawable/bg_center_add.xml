@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Left Glow (Light Blue) -->
+    <item android:right="12dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#BBDEFB" />
+            <corners android:radius="10dp" />
+        </shape>
+    </item>
+    <!-- Right Glow (Primary Blue) -->
+    <item android:left="12dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#0D47A1" />
+            <corners android:radius="10dp" />
+        </shape>
+    </item>
+    <!-- White Center -->
+    <item android:left="6dp" android:right="6dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#FFFFFF" />
+            <corners android:radius="10dp" />
+        </shape>
+    </item>
+</layer-list>

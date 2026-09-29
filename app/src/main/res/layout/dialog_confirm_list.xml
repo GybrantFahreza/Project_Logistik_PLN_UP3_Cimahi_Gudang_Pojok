@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/tvConfirmTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Judul Konfirmasi"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/primary_blue"
+        android:gravity="center_horizontal"
+        android:layout_marginBottom="6dp"/>
+
+    <TextView
+        android:id="@+id/tvConfirmSubtitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Deskripsi konfirmasi barang terpilih"
+        android:textSize="13sp"
+        android:textColor="#374151"
+        android:gravity="center_horizontal"
+        android:layout_marginBottom="16dp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxHeight="280dp">
+
+        <LinearLayout
+            android:id="@+id/containerConfirmRows"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"/>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/tvConfirmFooterNote"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Catatan tambahan"
+        android:textSize="12sp"
+        android:textColor="#6B7280"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="12dp"
+        android:visibility="gone"/>
+
+</LinearLayout>

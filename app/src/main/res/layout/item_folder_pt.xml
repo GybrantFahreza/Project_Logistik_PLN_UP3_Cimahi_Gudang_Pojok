@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="2dp"
+    app:strokeWidth="0dp"
+    app:cardUseCompatPadding="true"
+    android:layout_marginHorizontal="12dp"
+    android:layout_marginVertical="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:id="@+id/vSideIndicator"
+            android:layout_width="6dp"
+            android:layout_height="0dp"
+            android:background="@color/primary_blue"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/ivFolderIcon"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="16dp"
+            android:src="@drawable/ic_warehouse"
+            app:tint="@color/primary_blue"
+            app:layout_constraintStart_toEndOf="@id/vSideIndicator"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingVertical="16dp"
+            android:paddingHorizontal="16dp"
+            app:layout_constraintStart_toEndOf="@id/ivFolderIcon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <TextView
+                android:id="@+id/tvNamaPT"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="PT. TOTAL DAYA UTAMA"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:textColor="@color/text_main"/>
+
+            <TextView
+                android:id="@+id/tvJumlahSJ"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="3 Surat Jalan"
+                android:textSize="12sp"
+                android:layout_marginTop="4dp"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="4dp"
+                android:background="@drawable/bg_circle_icon"
+                android:backgroundTint="#F3F4F6"
+                android:textColor="@color/text_secondary"/>
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

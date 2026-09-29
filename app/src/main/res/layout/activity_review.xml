@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F5F5F5">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="📝 FORM VALIDASI SURAT JALAN"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#005A9C"
+                android:layout_marginBottom="16dp"/>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="📅 Tanggal Surat" android:textSize="12sp" android:textColor="#666666" android:textStyle="bold" />
+            <EditText android:id="@+id/etTanggal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12dp" android:background="@drawable/bg_edit_text_normal" android:padding="12dp" android:textSize="14sp" android:inputType="textCapCharacters" android:maxLines="2" android:imeOptions="actionNext"/>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="📄 Nomor Surat Jalan" android:textSize="12sp" android:textColor="#666666" android:textStyle="bold" />
+            <EditText android:id="@+id/etNoSj" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12dp" android:background="@drawable/bg_edit_text_normal" android:padding="12dp" android:textSize="14sp" android:inputType="textCapCharacters|textMultiLine" android:maxLines="2" android:imeOptions="actionNext"/>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🏢 Diberikan Kepada" android:textSize="12sp" android:textColor="#666666" android:textStyle="bold" />
+            <EditText android:id="@+id/etVendor" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12dp" android:background="@drawable/bg_edit_text_normal" android:padding="12dp" android:textSize="14sp" android:inputType="textCapCharacters|textMultiLine" android:maxLines="2" android:imeOptions="actionNext"/>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🏗️ Untuk Pekerjaan" android:textSize="12sp" android:textColor="#666666" android:textStyle="bold" />
+            <EditText android:id="@+id/etPekerjaan" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="24dp" android:background="@drawable/bg_edit_text_normal" android:padding="12dp" android:textSize="14sp" android:inputType="textCapCharacters|textMultiLine" android:maxLines="3" android:imeOptions="actionNext"/>
+
+            <!-- HEADER DAFTAR MATERIAL + TOMBOL HAPUS -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="DAFTAR MATERIAL:"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="#333333"/>
+
+                <Button
+                    android:id="@+id/btnHapusQty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:backgroundTint="#D32F2F"
+                    android:text="🗑️ KOSONGKAN QTY"
+                    android:textColor="#FFFFFF"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:padding="4dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/containerMaterial"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"/>
+
+            <Button
+                android:id="@+id/btnTambahBarang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp"
+                android:backgroundTint="#1976D2"
+                android:text="➕ TAMBAH BARIS MATERIAL MANUAL"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btnSimpanBrankas"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:text="💾 SIMPAN KE BRANKAS"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#005A9C"/>
+
+</LinearLayout>

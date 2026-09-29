@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_dashboard"
+        android:icon="@android:drawable/ic_menu_today"
+        android:title="Home" />
+    <item
+        android:id="@+id/nav_history"
+        android:icon="@android:drawable/ic_menu_recent_history"
+        android:title="Riwayat" />
+    <item
+        android:id="@+id/nav_placeholder"
+        android:icon="@android:drawable/ic_input_add"
+        android:title=""
+        android:enabled="false"/>
+    <item
+        android:id="@+id/nav_brankas"
+        android:icon="@android:drawable/ic_menu_save"
+        android:title="Brankas" />
+    <item
+        android:id="@+id/nav_gudang"
+        android:icon="@android:drawable/ic_menu_manage"
+        android:title="Gudang" />
+</menu>

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <!-- Header Title with Icon -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="16dp">
+
+        <ImageView
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:src="@drawable/ic_warehouse"
+            app:tint="@color/primary_blue"
+            android:layout_marginEnd="12dp"
+            android:contentDescription="Ambil Icon"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ambil dari Gudang"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/primary_blue"/>
+    </LinearLayout>
+
+    <!-- Card Info Material & Rincian Pekerjaan/Tanggal -->
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="0dp"
+        app:cardBackgroundColor="#F3F4F6"
+        app:strokeColor="#E5E7EB"
+        app:strokeWidth="1dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <TextView
+                android:id="@+id/tvNamaMaterialDialog"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nama Barang"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="#1F2937"/>
+
+            <TextView
+                android:id="@+id/tvStokMaksDialog"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tersedia di Gudang: 0 BH"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="#0284C7"
+                android:layout_marginTop="4dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#E5E7EB"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="RINCIAN PEKERJAAN &amp; TANGGAL:"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                android:textColor="#6B7280"
+                android:letterSpacing="0.05"
+                android:layout_marginBottom="4dp"/>
+
+            <!-- 🌟 KUNCI PERBAIKAN: Beri batasan maxLines dan ellipsize serta buat agar TextView ini bisa di-scroll -->
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="120dp">
+                <TextView
+                    android:id="@+id/tvRincianDetailDialog"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="- Pekerjaan: QTY (Tanggal)"
+                    android:textSize="12sp"
+                    android:textColor="#374151"
+                    android:lineSpacingExtra="3dp"/>
+            </ScrollView>
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Berapa QTY yang dinaikkan ke Truk hari ini?"
+        android:textSize="13sp"
+        android:textColor="#4B5563"
+        android:layout_marginBottom="12dp"
+        android:layout_marginTop="16dp" />
+
+    <!-- Input Outlined Box -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilQtyNaikTruk"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="QTY Naik Truk"
+        app:boxStrokeColor="@color/primary_blue"
+        app:hintTextColor="@color/primary_blue"
+        android:layout_marginBottom="8dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etQtyNaikTruk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/primary_blue"
+            android:inputType="number" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+</LinearLayout>
