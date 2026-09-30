@@ -197,17 +197,5 @@
             app:cornerRadius="10dp"
             android:visibility="gone"/>
 
-        <!-- Button Retur ke Gudang Sisa -->
-        <Button
-            android:id="@+id/btnReturGudangDetail"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="📦 RETUR SEBAGIAN KE GUDANG SISA"
-            android:layout_marginTop="12dp"
-            style="?attr/materialButtonOutlinedStyle"
-            app:strokeColor="#D32F2F"
-            android:textColor="#D32F2F"
-            app:cornerRadius="10dp"/>
-
     </LinearLayout>
 </ScrollView>

@@ -774,7 +774,6 @@ class RiwayatActivity : AppCompatActivity() {
                 val tvStatusIcon = dialogView.findViewById<TextView>(R.id.tvStatusIcon)
                 val tvStatusText = dialogView.findViewById<TextView>(R.id.tvStatusText)
                 val btnPelunasanDetail = dialogView.findViewById<Button>(R.id.btnPelunasanDetail)
-                val btnReturGudangDetail = dialogView.findViewById<Button>(R.id.btnReturGudangDetail)
 
                 tvNamaMaterial.text = data.namaBarang
 
@@ -813,13 +812,6 @@ class RiwayatActivity : AppCompatActivity() {
                     alertDialog.dismiss()
                     if (context is RiwayatActivity) {
                         context.pelunasanAdministrasi(data.namaBarang, data.listMaterialIds)
-                    }
-                }
-
-                btnReturGudangDetail?.setOnClickListener {
-                    alertDialog.dismiss()
-                    if (context is RiwayatActivity) {
-                        context.prosesTitipGudangRiwayat(data.namaBarang, data.totalQty, data.satuan, data.listMaterialIds)
                     }
                 }
 
